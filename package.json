@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "homepage": "http://jdelbick.github.io/website",
+  "homepage": "https://jdelbick.github.io/website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
