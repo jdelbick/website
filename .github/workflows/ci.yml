@@ -14,9 +14,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - uses: enriikke/gatsby-gh-pages-action@v2
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
+      - run: npm ci
+      - name: Install Gatsby
+      - run: npm install -g gatsby-cli
+      - name: Run build
+      - run: npm run build
+      - name: Deploy to gh-pages
+        run: npm run deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_REPO_TOKEN }}
       
