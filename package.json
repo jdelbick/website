@@ -14,8 +14,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "deploy-ci": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/jdelbick/website.git"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-cara": "^3.0.0",
