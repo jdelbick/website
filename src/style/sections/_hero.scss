@@ -15,11 +15,9 @@
   right: 0;
   z-index: -1;
 
-  // If you want to set a background image on the hero section, uncomment these with yout custom image
-
-  /* background: url("/src/assets/[your-image].png");
+  background: url("../images/snow-background.jpg");
   background-position: center;
-  background-size: cover; */
+  background-size: cover;
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
@@ -45,6 +43,12 @@
     @include respond(phone-xs) {
       font-size: 2.8rem;
     }
+  }
+  .background-cta {
+    position: relative;
+    display: flex;
+    right:0;
+    bottom: 0;
   }
 
   .hero-cta {

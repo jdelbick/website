@@ -9,19 +9,15 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: 'Hello, I am',
-  name: 'Jamie Delbick, ',
-  subtitle: 'Software Engineer',
-  cta: 'Find out more',
+  cta: 'About Me',
 };
 
 // ABOUT DATA
 export const aboutData = {
   img: 'profile-cal.jpg',
-  paragraphOne: 'Jamie is a Software Engineer at Adobe working on AEM Assets, a large-scale enterprise cloud service.  From her experience building micro services for the multi-tenant cloud service, she became passionate about Node.js and the Open Source community surrounding it.',
-  paragraphTwo: 'Before starting at Adobe in 2018, Jamie was a student at UC Berkeley studying Applied Mathematics with a focus on Computer Science.',
-  paragraphThree: 'In her free time, Jamie enjoys snowboarding, running and anything involving the outdoors.',
-  // resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  paragraphOne: 'I am currently a Software Engineer at Adobe working on a large-scale enterprise cloud service. From my experience building micro services for the multi-tenant cloud service, I became passionate about Node.js and the Open Source community surrounding it.',
+  paragraphTwo: 'Before starting at Adobe in 2018, I was a student at UC Berkeley studying Applied Mathematics with a focus on Computer Science.',
+  paragraphThree: 'When I am not coding, you will find me snowboarding, running, or doing anything involving the outdoors.',
 };
 
 // PROJECTS DATA
@@ -80,9 +76,4 @@ export const footerData = {
       url: 'https://github.com/jdelbick',
     }
   ],
-};
-
-// Github start/fork buttons
-export const githubButtons = {
-  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };

@@ -4,7 +4,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,15 +21,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Jamie Delbick`,
+        short_name: `Jamie`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#02aab0`,
+        background_color: `#333333`,
+        theme_color: `#67B26F`,
         display: `standalone`,
         icon: 'src/images/favicon-jamie.png',
       },
     },
+    `gatsby-plugin-offline`,
   ],
   pathPrefix: "/website",
 };
