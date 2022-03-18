@@ -9,7 +9,7 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  cta: 'About Me',
+  cta: 'Learn more',
 };
 
 // ABOUT DATA
