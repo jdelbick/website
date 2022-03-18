@@ -27,7 +27,7 @@ const Header = () => {
       <Container>
       <Typing className="hero-title">
       <h1 className="hero-title">
-      Hello, I am Jamie Delbick.
+      Hello, I am Jamie Delbick,
       <Typing.Delay ms={1000} />
       <br/>
       Software Engineer.

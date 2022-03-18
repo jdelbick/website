@@ -6,7 +6,7 @@ import Title from '../Title/Title';
 
 const Contact = () => {
   const { contact } = useContext(PortfolioContext);
-  const { cta, btn, email } = contact;
+  const { cta, btn, email, networks } = contact;
 
   return (
     <section id="contact">
@@ -21,11 +21,28 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn--hero"
-              href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
+              href={`mailto:${email}`}
             >
               {btn || "Let's Talk"}
             </a>
           </div>
+          <div className="social-links">
+          {networks &&
+            networks.map((network) => {
+              const { id, name, url } = network;
+              return (
+                <a
+                  key={id}
+                  href={url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label={name}
+                >
+                  <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
+                </a>
+              );
+            })}
+        </div>
         </Fade>
       </Container>
     </section>

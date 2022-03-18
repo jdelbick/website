@@ -60,10 +60,6 @@ export const contactData = {
   cta: 'Please reach out to via my email or LinkedIn.',
   btn: 'email',
   email: 'jamie.delbick@gmail.com',
-};
-
-// FOOTER DATA
-export const footerData = {
   networks: [
     {
       id: nanoid(),
