@@ -49,17 +49,22 @@ export const projectsData = [
   {
     id: nanoid(),
     title: 'Using Proxyquire with nested dependencies',
-    info: 'Medium Article',
+    info: 'Medium Article about my experience switching to a new mocking library for Node.js Mocha tests.',
     url: 'https://medium.com/@jamie.delbick/using-proxyquire-with-nested-dependencies-fd3a33d780e4',
     buttonName: 'Read here'
+  },
+  {
+    id: nanoid(),
+    title: 'Personal Website',
+    info: 'Personal Website adapted from a Gatsby template written in React.',
+    buttonName: 'Source code',
+    url: 'https://github.com/jdelbick/website'
   },
 ];
 
 // CONTACT DATA
 export const contactData = {
-  cta: 'Please reach out to via my email or LinkedIn.',
-  btn: 'email',
-  email: 'jamie.delbick@gmail.com',
+  cta: 'Please reach out to me via my email or LinkedIn.',
   networks: [
     {
       id: nanoid(),
@@ -70,6 +75,11 @@ export const contactData = {
       id: nanoid(),
       name: 'github',
       url: 'https://github.com/jdelbick',
+    },
+    {
+      id: nanoid(),
+      name: 'envelope',
+      url: 'mailto:jamie.delbick@gmail.com'
     }
   ],
 };
