@@ -34,15 +34,15 @@ export const projectsData = [
     id: nanoid(),
     img: 'adobe-developers-live-content.jpg',
     title: 'Speaker at Adobe Developers Live - Content',
-    info: 'Jamie, along with her co-worker, gave a 25 minute talk on how to extend AEM as a Cloud Service through asset microservices.',
-    info2: 'The demo includes a live coding example on how to set up, deploy, and integrate a custom worker using App Builder, previously known as Project Firefly',
+    info: 'Along with a co-worker, gave a 25 minute talk on how to extend AEM as a Cloud Service through asset microservices.',
+    info2: 'The demo includes a live coding example on how to set up, deploy, and integrate a custom worker using App Builder, previously known as Project Firefly.',
     url: 'https://www.youtube.com/watch?v=6wdbd050UMM&t=4s'
   },
   {
     id: nanoid(),
     img: 'adobe-developers-conf.png',
     title: 'Speaker at Adobe Developers Live - Commerce',
-    info: 'Jamie gave a 45 minute talk and live demo displaying how to customize asset processing for AEM as a Cloud Service using App Builder, previously known as Project Firefly.',
+    info: 'Gave a 45 minute talk and live demo displaying how to customize asset processing for AEM as a Cloud Service using App Builder, previously known as Project Firefly.',
     info2: '',
     url: 'https://www.youtube.com/watch?v=zpkkkQRoYho&t=10s'
   },
