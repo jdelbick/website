@@ -26,7 +26,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'api-world-conference.jpg',
     title: 'Speaker at API World',
-    info: 'Jamie, along with an Adobe co-worker, gave a 25 minute virtual talk at API World, one of the largest API focused conferences with over 4000 attendees.',
+    info: 'I gave a 25 minute virtual talk, along with an Adobe co-worker, at API World, one of the largest API focused conferences with over 4000 attendees.',
     info2: 'The talk focused on Content and Commerce AI APIs for Content Intelligence, using AEM text tags as an existing use case.',
     url: 'https://emamo.com/event/api-world-2021/r/speaker/jamie-delbick',
   },
