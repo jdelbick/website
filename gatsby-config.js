@@ -1,9 +1,15 @@
 module.exports = {
+  siteMetadata: {
+    title: `Jamie Delbick | Software Engineer`,
+    description: `Personal website showcasing my work as a Software Engineer at Adobe`,
+    author: `@jamiedelbick`,
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,16 +27,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jamie Delbick`,
-        short_name: `Jamie`,
+        name: `Jamie Delbick Personal Website`,
+        short_name: `Jamie Delbick`,
         start_url: `/`,
-        background_color: `#333333`,
-        theme_color: `#67B26F`,
+        background_color: `#1E1E1E`,
+        theme_color: `#378EF0`,
         display: `standalone`,
         icon: 'src/images/favicon-jamie.png',
+        cache_busting_mode: 'none',
       },
     },
-    `gatsby-plugin-offline`,
   ],
   pathPrefix: "/website",
+  trailingSlash: `always`,
 };

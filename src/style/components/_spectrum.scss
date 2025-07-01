@@ -1,0 +1,505 @@
+// React Spectrum customizations
+.react-spectrum-provider {
+  // Override Spectrum button styling to match your design
+  .spectrum-Button {
+    &.cta-btn {
+      border-radius: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      
+      &.cta-btn--hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: 2px solid transparent;
+        color: white;
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        &:active {
+          transform: translateY(0);
+        }
+      }
+      
+      &.cta-btn--secondary {
+        background: transparent;
+        border: 2px solid #378ef0;
+        color: #378ef0;
+        
+        &:hover {
+          background: #378ef0;
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 15px rgba(55, 142, 240, 0.4);
+        }
+        
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+    
+    &.contact-button {
+      margin: 0 8px 8px 0;
+      min-width: 120px;
+      
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+// Ensure proper spacing and layout
+.hero-cta .spectrum-Button,
+.project-actions .spectrum-Button,
+.contact-links .spectrum-Button {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+// Dark mode adjustments
+.spectrum-Provider[data-color-scheme="dark"] {
+  .spectrum-Button.cta-btn--secondary {
+    border-color: #5aa3f0;
+    color: #5aa3f0;
+    
+    &:hover {
+      background: #5aa3f0;
+    }
+  }
+}
+
+// Adobe Spectrum-inspired button styles
+.spectrum-btn {
+  // Base button styles
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 8px 16px;
+  min-height: 32px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  white-space: nowrap;
+  text-transform: none;
+  letter-spacing: 0.025em;
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(55, 142, 240, 0.6);
+  }
+  
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  // Primary button variant (Adobe Spectrum blue)
+  &--primary {
+    background-color: #378ef0;
+    border-color: #378ef0;
+    color: white;
+    
+    &:hover:not(:disabled) {
+      background-color: #2d7cdd;
+      border-color: #2d7cdd;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(55, 142, 240, 0.3);
+    }
+    
+    &:active:not(:disabled) {
+      background-color: #2970c4;
+      border-color: #2970c4;
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(55, 142, 240, 0.4);
+    }
+  }
+  
+  // Secondary button variant
+  &--secondary {
+    background-color: transparent;
+    border-color: #378ef0;
+    color: #378ef0;
+    
+    &:hover:not(:disabled) {
+      background-color: rgba(55, 142, 240, 0.1);
+      border-color: #2d7cdd;
+      color: #2d7cdd;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(55, 142, 240, 0.2);
+    }
+    
+    &:active:not(:disabled) {
+      background-color: rgba(55, 142, 240, 0.2);
+      border-color: #2970c4;
+      color: #2970c4;
+      transform: translateY(0);
+    }
+  }
+  
+  // Large button size
+  &--large {
+    padding: 12px 24px;
+    min-height: 40px;
+    font-size: 16px;
+  }
+  
+  // Icon support
+  i {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+}
+
+// Contact button specific styles
+.contact-button {
+  margin: 0 8px 8px 0;
+  min-width: 120px;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0 0 8px 0;
+  }
+}
+
+// Hero CTA button
+.hero-cta .spectrum-btn {
+  padding: 12px 32px;
+  min-height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+// Project action buttons
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  
+  .spectrum-btn {
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    
+    .spectrum-btn {
+      width: 100%;
+    }
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .spectrum-btn {
+    &--primary {
+      background-color: #5aa3f0;
+      border-color: #5aa3f0;
+      
+      &:hover:not(:disabled) {
+        background-color: #4a94e8;
+        border-color: #4a94e8;
+      }
+      
+      &:active:not(:disabled) {
+        background-color: #3a85df;
+        border-color: #3a85df;
+      }
+    }
+    
+    &--secondary {
+      border-color: #5aa3f0;
+      color: #5aa3f0;
+      
+      &:hover:not(:disabled) {
+        background-color: rgba(90, 163, 240, 0.1);
+        border-color: #4a94e8;
+        color: #4a94e8;
+      }
+      
+      &:active:not(:disabled) {
+        background-color: rgba(90, 163, 240, 0.2);
+        border-color: #3a85df;
+        color: #3a85df;
+      }
+    }
+  }
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+  .spectrum-btn {
+    border-width: 3px;
+    
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(55, 142, 240, 0.8);
+    }
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .spectrum-btn {
+    transition: none;
+    
+    &:hover:not(:disabled), 
+    &:active:not(:disabled) {
+      transform: none;
+    }
+  }
+}
+
+// React Spectrum Provider and Components Integration
+.react-spectrum-Provider {
+  // Ensure proper font family inheritance
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  // Custom button styling for React Spectrum buttons
+  .spectrum-Button {
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    // Contact button specific styling
+    &.contact-button {
+      margin: 0 8px 8px 0;
+      min-width: 120px;
+      
+      i {
+        margin-right: 8px;
+      }
+      
+      @media (max-width: 768px) {
+        width: 100%;
+        margin: 0 0 8px 0;
+      }
+    }
+    
+    // Back to top button styling
+    &.back-to-top-button {
+      min-width: 50px;
+      min-height: 50px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50% !important;
+      padding: 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .spectrum-Icon {
+        margin: 0 !important;
+      }
+      
+      @media (max-width: 768px) {
+        min-width: 45px;
+        min-height: 45px;
+        width: 45px;
+        height: 45px;
+      }
+    }
+    
+    // Enhanced hover effects
+    &:hover:not([disabled]) {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    &:active:not([disabled]) {
+      transform: translateY(0);
+    }
+    
+    // Special hover for back to top button
+    &.back-to-top-button:hover:not([disabled]) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  // React Spectrum Heading customizations
+  .spectrum-Heading {
+    font-family: inherit;
+    
+    // Section titles
+    &.section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      color: var(--spectrum-global-color-gray-800);
+    }
+    
+    // Hero title
+    &.hero-title-text {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    
+    // Project titles
+    &.project-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--spectrum-global-color-gray-800);
+    }
+  }
+  
+  // React Spectrum Text customizations
+  .spectrum-Text {
+    &.contact-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--spectrum-global-color-gray-700);
+    }
+  }
+  
+  // React Spectrum Flex customizations for projects
+  .spectrum-Flex {
+    // Project button containers - centered layout
+    &[data-justify-content="center"] {
+      justify-content: center !important;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      
+      .spectrum-Button {
+        margin: 0;
+        min-width: 140px;
+        
+        @media (max-width: 768px) {
+          min-width: 120px;
+          width: auto;
+        }
+      }
+    }
+    
+    // Contact buttons layout
+    &[data-justify-content="center"][data-margin-top="size-300"] {
+      margin-top: 1.5rem;
+      
+      .spectrum-Button {
+        min-width: 120px;
+        
+        @media (max-width: 768px) {
+          width: 100%;
+          margin: 0 0 0.5rem 0;
+        }
+      }
+    }
+  }
+}
+
+// Enhanced layout for action sections
+.hero-cta,
+.about-actions,
+.contact-links {
+  margin-top: 1.5rem;
+  
+  .spectrum-Button,
+  .spectrum-btn {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// Project actions using Flex - now centered
+.project-text .spectrum-Flex {
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+// Dark mode improvements
+.spectrum-Provider[data-color-scheme="dark"] {
+  .spectrum-Heading.section-title,
+  .spectrum-Heading.project-title {
+    color: var(--spectrum-global-color-gray-200);
+  }
+  
+  .spectrum-Text.contact-text {
+    color: var(--spectrum-global-color-gray-300);
+  }
+}
+
+// Responsive design improvements
+@media (max-width: 768px) {
+  .react-spectrum-Provider {
+    .spectrum-Button.contact-button {
+      width: 100%;
+      margin: 0 0 8px 0;
+    }
+    
+    // Projects buttons on mobile
+    .spectrum-Flex[data-justify-content="center"] {
+      flex-direction: column;
+      align-items: stretch;
+      
+      .spectrum-Button {
+        width: 100%;
+        margin: 0 0 0.5rem 0;
+      }
+    }
+  }
+  
+  .hero-cta,
+  .about-actions,
+  .contact-links {
+    .spectrum-Button,
+    .spectrum-btn {
+      width: 100%;
+      margin: 0 0 0.5rem 0;
+    }
+  }
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+  .react-spectrum-Provider .spectrum-Button {
+    border-width: 3px;
+    
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(55, 142, 240, 0.8);
+    }
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .react-spectrum-Provider .spectrum-Button {
+    transition: none;
+    
+    &:hover:not([disabled]), 
+    &:active:not([disabled]) {
+      transform: none;
+    }
+  }
+  
+  .back-to-top .back-to-top-button {
+    transition: none;
+    
+    &:hover {
+      transform: none;
+    }
+  }
+} 
