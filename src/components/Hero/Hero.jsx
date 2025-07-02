@@ -28,7 +28,7 @@ const Header = () => {
         <Fade bottom duration={1000} delay={FADE_DELAY} distance="30px">
           <div className="hero-cta">
             <Button 
-              variant="primary"
+              variant="cta"
               onPress={scrollToAbout}
               style="fill"
             >

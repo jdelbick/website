@@ -35,7 +35,7 @@ const About = () => {
                 <p className="about-paragraph">{paragraphThree}</p>
                 <div className="about-actions">
                   <Button 
-                    variant="cta"
+                    variant="primary"
                     onPress={scrollToProjects}
                     style="fill"
                   >
