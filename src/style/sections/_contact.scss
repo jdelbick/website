@@ -1,60 +1,86 @@
-#contact {
-  // background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
-  // -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+#contact,
+.contact-section {
   background-color: $white-color;
   color: $primary-color;
-  clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-  padding: 15rem 0 10rem 0;
-  margin-top: -15rem;
-  margin-bottom: -1px;
-  // color: $white-color;
+  padding: 5rem 0;
+  margin: 0;
 
   @include respond(tab-land) {
-    padding: 10rem 0;
-    clip-path: none;
-    margin-top: 0;
-    -webkit-clip-path: none;
+    padding: 4rem 0;
   }
 
-  .social-links {
+  @include respond(phone) {
+    padding: 3rem 0;
+  }
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @include respond(phone) {
+    padding: 0 1rem;
+  }
+}
+
+.contact-card {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: $primary-color;
+
+  @include respond(phone) {
+    font-size: 1rem;
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  a {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-  
-    a {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: $primary-color;
-      font-size: 3rem;
-      width: 5rem;
-      height: 5rem;
-      margin: $default-font-size $default-font-size;
-      transition: all 0.2s ease-in;
-  
-      &:hover {
-        transform: translateY(-2px);
-      }
-    }
-  }
+    color: $primary-color;
+    font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
+    margin: $default-font-size $default-font-size;
+    transition: all 0.2s ease-in;
 
-  .contact-wrapper {
-    margin-top: 3.2rem;
-    padding: 0 2rem;
-    backface-visibility: hidden;
-
-    &__text {
-      margin-bottom: 2.5rem;
-    }
-
-    &__text,
-    a {
-      font-size: 2.4rem;
-
-      // Responsive for contact text
-      @include respond(phone) {
-        font-size: 2rem;
-      }
+    &:hover {
+      transform: translateY(-2px);
     }
   }
 }
+
+.contact-wrapper {
+  margin-top: 3.2rem;
+  padding: 0 2rem;
+  backface-visibility: hidden;
+
+  &__text {
+    margin-bottom: 2.5rem;
+  }
+
+  &__text,
+  a {
+    font-size: 2.4rem;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+} 

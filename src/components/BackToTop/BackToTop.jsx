@@ -38,6 +38,7 @@ const BackToTop = () => {
             variant="primary"
             isQuiet
             onPress={scrollToTop}
+            style="fill"
             aria-label="Back to top"
             UNSAFE_className="back-to-top-button"
           >

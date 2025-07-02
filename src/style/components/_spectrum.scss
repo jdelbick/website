@@ -165,7 +165,8 @@
 // Contact button specific styles
 .contact-button {
   margin: 0 8px 8px 0;
-  min-width: 120px;
+  min-width: 150px;
+  width: 150px;
   
   @media (max-width: 768px) {
     width: 100%;
@@ -278,7 +279,8 @@
     // Contact button specific styling
     &.contact-button {
       margin: 0 8px 8px 0;
-      min-width: 120px;
+      min-width: 150px;
+      width: 150px;
       
       i {
         margin-right: 8px;
@@ -396,7 +398,8 @@
       margin-top: 1.5rem;
       
       .spectrum-Button {
-        min-width: 120px;
+        min-width: 150px;
+        width: 150px;
         
         @media (max-width: 768px) {
           width: 100%;

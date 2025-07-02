@@ -4,6 +4,8 @@ import { Button, Heading } from '@adobe/react-spectrum';
 import PortfolioContext from '../../context/context';
 import Typing from 'react-typing-animation';
 
+const FADE_DELAY = 600;
+
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
   const { cta } = hero;
@@ -18,16 +20,17 @@ const Header = () => {
         <Typing className="hero-title">
           <Heading level={1} UNSAFE_className="hero-title-text">
             Hello, I am Jamie Delbick,
-            <Typing.Delay ms={1000} />
+            <Typing.Delay ms={600} />
             <br/>
             Software Engineer at Adobe.
           </Heading>
         </Typing>
-        <Fade bottom duration={1000} delay={1000} distance="30px">
+        <Fade bottom duration={1000} delay={FADE_DELAY} distance="30px">
           <div className="hero-cta">
             <Button 
-              variant="accent"
+              variant="primary"
               onPress={scrollToAbout}
+              style="fill"
             >
               {cta || 'Learn more'}
             </Button>

@@ -5,6 +5,8 @@ import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
+const FADE_DELAY = 300;
+
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
 
@@ -26,7 +28,7 @@ const Projects = () => {
             return (
               <div key={id} className={`project-item ${isEven ? 'project-item--reverse' : ''}`}>
                 <div className="project-content">
-                  <Fade bottom duration={1000} delay={300} distance="30px">
+                  <Fade bottom duration={1000} delay={FADE_DELAY} distance="30px">
                     <div className="project-card">
                       <div className="project-text">
                         <Heading level={3} UNSAFE_className="project-title">{title}</Heading>
@@ -36,14 +38,16 @@ const Projects = () => {
                         </div>
                         <Flex gap="size-150" wrap justifyContent="center" marginTop="size-300">
                           <Button 
-                            variant="accent"
+                            variant="primary"
+                            style="fill"
                             onPress={() => openUrl(url)}
                           >
                             {buttonName || 'Learn More'}
                           </Button>
                           {repo && (
                             <Button 
-                              variant="secondary"
+                              variant="primary"
+                              style="fill"
                               onPress={() => openUrl(repo)}
                             >
                               Source Code
@@ -57,7 +61,7 @@ const Projects = () => {
                 
                 {img && (
                   <div className="project-image">
-                    <Fade bottom duration={1000} delay={600} distance="30px">
+                    <Fade bottom duration={1000} delay={FADE_DELAY} distance="30px">
                       <div className="project-image-wrapper">
                         <div 
                           className={`project-thumbnail ${title.includes('Adobe Summit') ? 'project-thumbnail--centered' : ''}`}
