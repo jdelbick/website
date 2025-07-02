@@ -13,11 +13,11 @@ const ProjectImg = ({ filename, alt }) => {
             name
             childImageSharp {
               gatsbyImageData(
-                width: 800
-                height: 400
+                width: 1600
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
-                quality: 85
+                quality: 95
+                layout: CONSTRAINED
               )
             }
           }
@@ -34,7 +34,15 @@ const ProjectImg = ({ filename, alt }) => {
 
   const imageData = getImage(image.node.childImageSharp);
 
-  return <GatsbyImage image={imageData} alt={alt} />;
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+      <GatsbyImage 
+        image={imageData} 
+        alt={alt} 
+        style={{ maxWidth: '100%', width: '100%' }}
+      />
+    </div>
+  );
 };
 
 ProjectImg.propTypes = {

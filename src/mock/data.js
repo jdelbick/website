@@ -18,7 +18,7 @@ export const aboutData = {
   paragraphOne: 'I am currently a Fullstack Senior Software Engineer at Adobe working on Adobe GenStudio for Performance Marketing. I previously built microservices for AEM as a Cloud Service, and then transitioned to GenStudio where I helped implement the insights platform - integrating data from Meta, LinkedIn, and other sources with Customer Journey Analytics (CJA) to create compelling dashboards and visualizations that show how marketing assets perform.',
   paragraphTwo: 'Now I focus on the GenStudio canvas, building the creative tools that enable marketers to generate and customize content. I also work extensively on extensibility, helping developers build integrations and extensions for the platform - including the expertise I shared in my recent Adobe Summit talk on extending GenStudio.',
   paragraphThree: 'Before starting at Adobe in 2018, I was a student at UC Berkeley studying Applied Mathematics with a focus on Computer Science. When I am not coding, you will find me snowboarding, running, or doing anything involving the outdoors.',
-  resume: 'https://www.linkedin.com/in/jamiedelbick/', // Link to LinkedIn profile as resume
+  resume: 'https://www.linkedin.com/in/jamiedelbick/',
 };
 
 // PROJECTS DATA
