@@ -14,10 +14,10 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile-cal.jpg',
-  paragraphOne: 'I am currently a Fullstack Senior Software Engineer at Adobe working on Adobe GenStudio for Performance Marketing. I previously built microservices for AEM as a Cloud Service, and then transitioned to GenStudio where I helped implement the insights platform - integrating data from Meta, LinkedIn, and other sources with Customer Journey Analytics (CJA) to create compelling dashboards and visualizations that show how marketing assets perform.',
-  paragraphTwo: 'Now I focus on the GenStudio canvas, building the creative tools that enable marketers to generate and customize content. I also work extensively on extensibility, helping developers build integrations and extensions for the platform - including the expertise I shared in my recent Adobe Summit talk on extending GenStudio.',
-  paragraphThree: 'Before starting at Adobe in 2018, I was a student at UC Berkeley studying Applied Mathematics with a focus on Computer Science. When I am not coding, you will find me snowboarding, running, or doing anything involving the outdoors.',
+  img: 'profile-jamie.webp',
+  paragraphOne: 'I am currently a Fullstack Senior Software Engineer at Adobe working on Adobe GenStudio for Performance Marketing. I previously built microservices for AEM as a Cloud Service. I then transitioned to GenStudio where I helped implement the insights platform, integrating data from Meta, LinkedIn, and other sources with Customer Journey Analytics (CJA) to create compelling dashboards and visualizations that show how marketing assets perform.',
+  paragraphTwo: 'Now I focus on the GenStudio Create Canvas, building the creative tools that enable marketers to generate and customize content. I also work extensively on extensibility, helping developers build integrations and extensions for the platform - including the expertise I shared in my recent Adobe Summit talk on extending GenStudio.',
+  paragraphThree: 'Before starting at Adobe in 2018, I was a student at UC Berkeley studying Applied Mathematics with a focus on Computer Science. When I am not coding, you will find me snowboarding, exploring San Francisco or training for my next road race.',
   resume: 'https://www.linkedin.com/in/jamiedelbick/',
 };
 
@@ -27,8 +27,8 @@ export const projectsData = [
     id: nanoid(),  
     img: 'adobe-summit-2025.png',
     title: 'Speaker at Adobe Summit 2025',
-    info: 'A Developer\'s Guide: Extending Adobe GenStudio - Discover how to extend and enhance GenStudio for Performance Marketing. Dive into key concepts, tools, and best practices that empower you to build integrations, create extensions, and adapt the product to meet your unique requirements.',
-    info2: 'Key takeaways include getting the technical knowledge to unlock new possibilities and gaining practical experience through real-world scenarios, code samples, and examples tailored to a developer\'s workflow.',
+    info: 'I gave a virtual talk along with a co-worker titled "A Developer\'s Guide: Extending Adobe GenStudio" at Adobe Summit 2025 to over 900+ enrolled attendees. The session covered how to extend Adobe GenStudio, where I shared my hands-on experience building extensions for GenStudio for Performance Marketing.',
+    info2: 'I provided practical insights through real-world scenarios, live code samples, and examples from my work on GenStudio\'s extensibility platform. Attendees gained the technical knowledge needed to build their own integrations and adapt the product to meet their unique requirements.',
     url: 'https://business.adobe.com/summit/2025/sessions/a-developers-guide-extending-adobe-genstudio-os606.html',
   },
   {

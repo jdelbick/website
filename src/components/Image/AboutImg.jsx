@@ -14,7 +14,7 @@ const AboutImg = ({ filename, alt }) => {
             childImageSharp {
               gatsbyImageData(
                 width: 400
-                height: 400
+                height: 650
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
                 quality: 85
