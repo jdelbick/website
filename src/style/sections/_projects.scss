@@ -1,3 +1,206 @@
+// Modern Projects Section Styling
+.projects-section {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+  
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+  }
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  
+  @media (max-width: 768px) {
+    gap: 3rem;
+  }
+}
+
+.project-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  &--reverse {
+    .project-content {
+      order: 2;
+    }
+    .project-image {
+      order: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+    &--reverse {
+      .project-content,
+      .project-image {
+        order: unset;
+      }
+    }
+  }
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card {
+  width: 100%;
+}
+
+.project-text {
+  text-align: center;
+  
+  .project-title {
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+  }
+  
+  .project-description {
+    margin-bottom: 1.5rem;
+    
+    p {
+      color: #4a5568;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      &.project-description-secondary {
+        color: #666;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image-wrapper {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+  
+  // Special styling for Adobe Summit to center the image better
+  &--centered {
+    .gatsby-image-wrapper,
+    .gatsby-image-wrapper > div,
+    .gatsby-image-wrapper img {
+      object-position: center center !important;
+      object-fit: cover !important;
+    }
+  }
+  
+  // Ensure all images maintain aspect ratio
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 300px;
+    
+    @media (max-width: 768px) {
+      height: 250px;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+// Back to Top Button Styling
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  
+  .back-to-top-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    // Override React Spectrum button styles for circular shape
+    .spectrum-Button-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    bottom: 1rem;
+    right: 1rem;
+    
+    .back-to-top-button {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+// Legacy styles for backward compatibility
 #projects {
   background-color: $white-color;
   color: $primary-color;

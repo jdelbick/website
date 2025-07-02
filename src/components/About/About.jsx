@@ -1,67 +1,51 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Fade from 'react-reveal/Fade';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Button } from '@adobe/react-spectrum';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
+  const { img, paragraphOne, paragraphTwo, paragraphThree } = about;
 
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth > 769) {
-      setIsDesktop(true);
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-      setIsDesktop(false);
-    }
-  }, []);
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <section id="about">
-      <Container>
+    <section id="about" className="about-section">
+      <div className="about-container">
         <Title title="Who am I?" />
-        <Row className="about-wrapper">
-          <Col md={6} sm={12}>
+        <div className="about-wrapper">
+          <div className="about-image">
             <Fade bottom duration={1000} delay={600} distance="30px">
-              <div className="about-wrapper__image">
+              <div className="about-image-wrapper">
                 <AboutImg alt="profile picture" filename={img} />
               </div>
             </Fade>
-          </Col>
-          <Col md={6} sm={12}>
-            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-              <div className="about-wrapper__info">
-                <p className="about-wrapper__info-text">
-                  {paragraphOne}</p>
-                <p className="about-wrapper__info-text">
-                  {paragraphTwo}
-                </p>
-                <p className="about-wrapper__info-text">
-                  {paragraphThree}
-                </p>
-                {resume && (
-                  <span className="d-flex mt-3">
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cta-btn cta-btn--resume"
-                      href={resume}
+          </div>
+          <div className="about-content">
+            <Fade bottom duration={1000} delay={1000} distance="30px">
+              <div className="about-card">
+                <div className="about-text">
+                  <p className="about-paragraph">{paragraphOne}</p>
+                  <p className="about-paragraph">{paragraphTwo}</p>
+                  <p className="about-paragraph">{paragraphThree}</p>
+                  <div className="about-actions">
+                    <Button 
+                      variant="accent"
+                      onPress={scrollToProjects}
                     >
-                      Resume
-                    </a>
-                  </span>
-                )}
+                      View My Work
+                    </Button>
+                  </div>
+                </div>
               </div>
             </Fade>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
