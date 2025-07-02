@@ -16,8 +16,8 @@ export const heroData = {
 export const aboutData = {
   img: 'profile-jamie.webp',
   paragraphOne: 'I am currently a Fullstack Senior Software Engineer at Adobe working on Adobe GenStudio for Performance Marketing. I previously built microservices for AEM as a Cloud Service. I then transitioned to GenStudio where I helped implement the insights platform, integrating data from Meta, LinkedIn, and other sources with Customer Journey Analytics (CJA) to create compelling dashboards and visualizations that show how marketing assets perform.',
-  paragraphTwo: 'Now I focus on the GenStudio Create Canvas, building the creative tools that enable marketers to generate and customize content. I also work extensively on extensibility, helping developers build integrations and extensions for the platform - including the expertise I shared in my recent Adobe Summit talk on extending GenStudio.',
-  paragraphThree: 'Before starting at Adobe in 2018, I was a student at UC Berkeley studying Applied Mathematics with a focus on Computer Science. When I am not coding, you will find me snowboarding, exploring San Francisco or training for my next road race.',
+  paragraphTwo: 'Now I focus on the GenStudio Create Canvas, building the creative tools that enable marketers to generate and customize content. I also work on extensibility, helping developers build integrations and extensions for the platform - including the expertise I shared in my recent Adobe Summit talk on extending GenStudio.',
+  paragraphThree: 'Before starting at Adobe in 2018, I was a student at UC Berkeley studying Applied Mathematics with a focus on Computer Science. When I am not coding, you will find me snowboarding, exploring San Francisco or training for my next half marathon.',
   resume: 'https://www.linkedin.com/in/jamiedelbick/',
 };
 
@@ -27,8 +27,8 @@ export const projectsData = [
     id: nanoid(),  
     img: 'adobe-summit-2025.png',
     title: 'Speaker at Adobe Summit 2025',
-    info: 'I gave a virtual talk along with a co-worker titled "A Developer\'s Guide: Extending Adobe GenStudio" at Adobe Summit 2025 to over 900+ enrolled attendees. The session covered how to extend Adobe GenStudio, where I shared my hands-on experience building extensions for GenStudio for Performance Marketing.',
-    info2: 'I provided practical insights through real-world scenarios, live code samples, and examples from my work on GenStudio\'s extensibility platform. Attendees gained the technical knowledge needed to build their own integrations and adapt the product to meet their unique requirements.',
+    info: 'Co-presented "A Developer\'s Guide: Extending Adobe GenStudio" at Adobe Summit 2025 to 900+ virtual attendees, covering how to extend Adobe GenStudio for Performance Marketing.',
+    info2: 'Shared hands-on experience building GenStudio extensions through real-world scenarios, live code samples, and practical integration examples to help developers build their own customizations.',
     url: 'https://business.adobe.com/summit/2025/sessions/a-developers-guide-extending-adobe-genstudio-os606.html',
   },
   {
