@@ -5,7 +5,14 @@ module.exports = {
     author: `@jamiedelbick`,
   },
   plugins: [
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        sassOptions: {
+          silenceDeprecations: ['legacy-js-api'],
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -38,6 +45,6 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: "/website",
+  pathPrefix: process.env.NODE_ENV === 'production' ? '/website' : '',
   trailingSlash: `always`,
 };

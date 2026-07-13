@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 // React Spectrum customizations
 .react-spectrum-provider {
   // Override Spectrum button styling to match your design
@@ -265,7 +267,7 @@
 }
 
 // React Spectrum Provider and Components Integration
-.react-spectrum-Provider {
+body .react-spectrum-Provider {
   // Ensure proper font family inheritance
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
@@ -505,4 +507,56 @@
       transform: none;
     }
   }
-} 
+}
+
+// High-contrast overrides for the portfolio UI.
+.react-spectrum-Provider {
+  .spectrum-Heading.section-title {
+    color: $primary-color !important;
+  }
+
+  .hero-cta {
+    .spectrum-Button {
+      min-height: 4.8rem;
+      border-radius: 999px;
+      padding: 0 2.4rem;
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+
+    .spectrum-Button:first-child {
+      border-color: #0b74de !important;
+      background: #0b74de !important;
+      color: #ffffff !important;
+      box-shadow: 0 12px 28px rgba(11, 116, 222, 0.28);
+    }
+
+    .spectrum-Button:last-child {
+      border: 2px solid #5258e4 !important;
+      background: rgba(255, 255, 255, 0.78) !important;
+      color: #3439a8 !important;
+    }
+
+    .spectrum-Button:last-child:hover {
+      background: #5258e4 !important;
+      color: #ffffff !important;
+      box-shadow: 0 12px 28px rgba(82, 88, 228, 0.24);
+    }
+  }
+
+  .project-text .spectrum-Button,
+  .writing-card .spectrum-Button,
+  .about-actions .spectrum-Button,
+  .contact-card .spectrum-Button {
+    border-color: #172033 !important;
+    background: #172033 !important;
+    color: #ffffff !important;
+    font-weight: 750;
+
+    &:hover:not([disabled]) {
+      border-color: #5258e4 !important;
+      background: #5258e4 !important;
+      color: #ffffff !important;
+    }
+  }
+}

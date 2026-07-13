@@ -1,9 +1,6 @@
-import React, { useContext, useState, useEffect } from 'react';
-import PortfolioContext from '../../context/context';
+import React, { useState, useEffect } from 'react';
 
 const Footer = () => {
-  const { footer } = useContext(PortfolioContext);
-  const { networks } = footer;
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -30,11 +27,9 @@ const Footer = () => {
         <Divider />
         <p className="footer-text">
           © {new Date().getFullYear()} - Jamie Delbick <br/>
-          Built with <Link href="https://react-spectrum.adobe.com/react-spectrum/index.html">Adobe React Spectrum</Link>
-          <br/>
-          Based off of a template developed by{' '}
-          <Link href="https://github.com/cobidev">
-            Jacobo Martínez
+          Custom Gatsby site built with{' '}
+          <Link href="https://react-spectrum.adobe.com/react-spectrum/index.html">
+            Adobe React Spectrum
           </Link>
         </p>
       </div>

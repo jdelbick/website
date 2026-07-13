@@ -1,11 +1,8 @@
 import React, { useContext } from 'react';
-import Fade from 'react-reveal/Fade';
 import { Button, Heading, Flex } from '@adobe/react-spectrum';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
-
-const FADE_DELAY = 300;
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -22,65 +19,57 @@ const Projects = () => {
         <Title title="Recent Projects and Speaking Engagements" />
         <div className="projects-grid">
           {projects.map((project, index) => {
-            const { title, info, info2, url, repo, img, id, buttonName } = project;
+            const { title, type, info, info2, url, repo, img, id, buttonName } = project;
             const isEven = index % 2 === 0;
 
             return (
-              <div key={id} className={`project-item ${isEven ? 'project-item--reverse' : ''}`}>
+              <article
+                key={id}
+                className={`project-item ${isEven ? 'project-item--reverse' : ''} ${
+                  !img ? 'project-item--text-only' : ''
+                }`}
+              >
                 <div className="project-content">
-                  <Fade bottom duration={1000} delay={FADE_DELAY} distance="30px">
-                    <div className="project-card">
-                      <div className="project-text">
-                        <Heading level={3} UNSAFE_className="project-title">{title}</Heading>
-                        <div className="project-description">
-                          <p>{info}</p>
-                          {info2 && <p className="project-description-secondary">{info2}</p>}
-                        </div>
-                        <Flex gap="size-150" wrap justifyContent="center" marginTop="size-300">
-                          <Button 
-                            variant="primary"
-                            style="fill"
-                            onPress={() => openUrl(url)}
-                          >
-                            {buttonName || 'Learn More'}
-                          </Button>
-                          {repo && (
-                            <Button 
-                              variant="primary"
-                              style="fill"
-                              onPress={() => openUrl(repo)}
-                            >
-                              Source Code
-                            </Button>
-                          )}
-                        </Flex>
+                  <div className="project-card">
+                    <div className="project-text">
+                      {type && <p className="project-type">{type}</p>}
+                      <Heading level={3} UNSAFE_className="project-title">
+                        {title}
+                      </Heading>
+                      <div className="project-description">
+                        <p>{info}</p>
+                        {info2 && <p className="project-description-secondary">{info2}</p>}
                       </div>
+                      <Flex gap="size-150" wrap justifyContent="start" marginTop="size-300">
+                        <Button variant="primary" style="fill" onPress={() => openUrl(url)}>
+                          {buttonName || 'Learn More'}
+                        </Button>
+                        {repo && (
+                          <Button variant="primary" style="outline" onPress={() => openUrl(repo)}>
+                            Source Code
+                          </Button>
+                        )}
+                      </Flex>
                     </div>
-                  </Fade>
+                  </div>
                 </div>
-                
+
                 {img && (
                   <div className="project-image">
-                    <Fade bottom duration={1000} delay={FADE_DELAY} distance="30px">
-                      <div className="project-image-wrapper">
-                        <div 
-                          className={`project-thumbnail ${title.includes('Adobe Summit') ? 'project-thumbnail--centered' : ''}`}
-                          onClick={() => openUrl(url)}
-                          role="button"
-                          tabIndex={0}
-                          onKeyPress={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                              openUrl(url);
-                            }
-                          }}
-                        >
-                          <ProjectImg alt={title} filename={img} />
-                        </div>
-                      </div>
-                    </Fade>
+                    <div className="project-image-wrapper">
+                      <button
+                        type="button"
+                        className={`project-thumbnail ${
+                          title.includes('Adobe Summit') ? 'project-thumbnail--centered' : ''
+                        }`}
+                        onClick={() => openUrl(url)}
+                      >
+                        <ProjectImg alt={title} filename={img} />
+                      </button>
+                    </div>
                   </div>
                 )}
-              </div>
+              </article>
             );
           })}
         </div>

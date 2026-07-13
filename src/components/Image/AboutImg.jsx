@@ -6,18 +6,19 @@ import PropTypes from 'prop-types';
 const AboutImg = ({ filename, alt }) => {
   const data = useStaticQuery(graphql`
     query {
-      images: allFile {
+      images: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
         edges {
           node {
             relativePath
             name
             childImageSharp {
               gatsbyImageData(
-                width: 400
-                height: 650
-                placeholder: BLURRED
+                width: 720
+                height: 960
+                placeholder: NONE
                 formats: [AUTO, WEBP]
-                quality: 85
+                quality: 95
+                transformOptions: { fit: COVER, cropFocus: CENTER }
               )
             }
           }
@@ -34,7 +35,7 @@ const AboutImg = ({ filename, alt }) => {
 
   const imageData = getImage(image.node.childImageSharp);
 
-  return <GatsbyImage image={imageData} alt={alt} />;
+  return <GatsbyImage image={imageData} alt={alt} loading="eager" />;
 };
 
 AboutImg.propTypes = {

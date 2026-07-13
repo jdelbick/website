@@ -1,16 +1,21 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 #contact,
 .contact-section {
-  background-color: $white-color;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(82, 88, 228, 0.1), transparent 24rem),
+    $surface-color;
   color: $primary-color;
-  padding: 5rem 0;
+  padding: 8rem 0;
   margin: 0;
 
   @include respond(tab-land) {
-    padding: 4rem 0;
+    padding: 6rem 0;
   }
 
   @include respond(phone) {
-    padding: 3rem 0;
+    padding: 5rem 0;
   }
 }
 
@@ -25,22 +30,28 @@
 }
 
 .contact-card {
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
+  max-width: 760px;
+  margin: 0 auto;
+  border: 1px solid $border-color;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 20px 60px rgba(23, 32, 51, 0.08);
+  padding: 3.2rem;
+
+  @include respond(phone) {
+    padding: 2rem;
+  }
 }
 
 .contact-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.6rem;
+  line-height: 1.7;
   text-align: center;
   margin-bottom: 1.5rem;
-  color: $primary-color;
+  color: $muted-color;
 
   @include respond(phone) {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 

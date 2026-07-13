@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const ProjectImg = ({ filename, alt }) => {
   const data = useStaticQuery(graphql`
     query {
-      images: allFile {
+      images: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
         edges {
           node {
             relativePath
@@ -14,7 +14,7 @@ const ProjectImg = ({ filename, alt }) => {
             childImageSharp {
               gatsbyImageData(
                 width: 1600
-                placeholder: BLURRED
+                placeholder: NONE
                 formats: [AUTO, WEBP]
                 quality: 95
                 layout: CONSTRAINED
@@ -39,6 +39,7 @@ const ProjectImg = ({ filename, alt }) => {
       <GatsbyImage 
         image={imageData} 
         alt={alt} 
+        loading="eager"
         style={{ maxWidth: '100%', width: '100%' }}
       />
     </div>

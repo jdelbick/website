@@ -1,15 +1,17 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 #about {
-  background-color: $white-color;
+  background-color: $surface-color;
   color: $primary-color;
-  padding: 5rem 0;
-  border-top: 0px;
+  padding: 8rem 0;
 
   @include respond(tab-land) {
-    padding: 4rem 0;
+    padding: 6rem 0;
   }
 
   @include respond(phone) {
-    padding: 3rem 0;
+    padding: 5rem 0;
   }
 }
 
@@ -25,10 +27,9 @@
 
 .about-content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
   gap: 4rem;
   align-items: center;
-  margin-top: 3rem;
 
   @include respond(tab-land) {
     grid-template-columns: 1fr;
@@ -53,21 +54,17 @@
 
 .about-image-container {
   width: 100%;
-  max-width: 400px;
+  max-width: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  // Remove any potential background styling
-  background: none;
-  border: none;
-  box-shadow: none;
-
   .gatsby-image-wrapper {
     width: 100%;
-    border-radius: 12px;
+    border: 10px solid rgba(255, 255, 255, 0.72);
+    border-radius: 28px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 24px 60px $shadow-color;
     transition: transform 0.3s ease;
 
     &:hover {
@@ -97,18 +94,19 @@
 }
 
 .about-text-content {
-  // Remove any card/background styling
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
+  border: 1px solid $border-color;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 20px 60px rgba(23, 32, 51, 0.08);
+  padding: 3.2rem;
   margin: 0;
+  text-align: left;
 
   .about-paragraph {
-    font-size: 1.3rem;
-    line-height: 1.8;
+    font-size: 1.55rem;
+    line-height: 1.75;
     margin-bottom: 1.8rem;
-    color: $primary-color;
+    color: $muted-color;
 
     &:last-of-type {
       margin-bottom: 2.5rem;
@@ -128,11 +126,23 @@
       }
     }
   }
+
+  @include respond(tab-land) {
+    text-align: center;
+  }
+
+  @include respond(phone) {
+    padding: 2rem;
+  }
 }
 
 .about-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+
+  @include respond(tab-land) {
+    justify-content: center;
+  }
 
   .spectrum-Button {
     padding: 16px 32px;
@@ -158,17 +168,4 @@
       min-height: 44px;
     }
   }
-}
-
-// Remove old styles that might be conflicting
-.about-wrapper,
-.about-card,
-.about-image,
-.about-content {
-  // Reset any old styling
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
 }

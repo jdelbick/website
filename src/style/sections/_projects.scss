@@ -1,10 +1,13 @@
-// Modern Projects Section Styling
+@use '../abstracts/variables' as *;
+
 .projects-section {
-  padding: 5rem 0;
-  background-color: $white-color;
-  
+  padding: 8rem 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(247, 243, 237, 0.94)),
+    $surface-color;
+
   @media (max-width: 768px) {
-    padding: 3rem 0;
+    padding: 5rem 0;
   }
 }
 
@@ -21,29 +24,30 @@
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  
+  gap: 2.4rem;
+
   @media (max-width: 768px) {
-    gap: 3rem;
+    gap: 2rem;
   }
 }
 
 .project-item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.9fr);
+  gap: 2.4rem;
   align-items: center;
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid $border-color;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 2.4rem;
+  box-shadow: 0 18px 50px rgba(23, 32, 51, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 24px 70px rgba(23, 32, 51, 0.13);
   }
-  
+
   &--reverse {
     .project-content {
       order: 2;
@@ -52,11 +56,20 @@
       order: 1;
     }
   }
-  
+
+  &--text-only {
+    grid-template-columns: 1fr;
+
+    .project-card {
+      max-width: 780px;
+    }
+  }
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    
+    gap: 1.6rem;
+    padding: 1.8rem;
+
     &--reverse {
       .project-content,
       .project-image {
@@ -77,30 +90,50 @@
 }
 
 .project-text {
-  text-align: center;
-  
-  .project-title {
-    margin-bottom: 1.5rem;
-    color: #2d3748;
+  text-align: left;
+
+  .project-type {
+    display: inline-flex;
+    margin: 0 0 1rem;
+    border-radius: 999px;
+    background: rgba(82, 88, 228, 0.1);
+    color: $secondary-color;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
-  
+
+  .project-title {
+    margin: 0 0 1.2rem;
+    color: $primary-color;
+    font-size: 2.4rem;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+
   .project-description {
     margin-bottom: 1.5rem;
-    
+
     p {
-      color: #4a5568;
-      line-height: 1.6;
+      color: $muted-color;
+      font-size: 1.5rem;
+      line-height: 1.7;
       margin-bottom: 1rem;
-      
+
       &:last-child {
         margin-bottom: 0;
       }
-      
+
       &.project-description-secondary {
-        color: #666;
-        font-style: italic;
+        color: rgba(95, 107, 122, 0.88);
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
   }
 }
 
@@ -115,10 +148,10 @@
   max-width: 500px;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(23, 32, 51, 0.12);
   transition: transform 0.3s ease;
-  
+
   &:hover {
     transform: scale(1.02);
   }
@@ -127,14 +160,16 @@
 .project-thumbnail {
   width: 100%;
   height: auto;
+  border: 0;
+  background: transparent;
+  padding: 0;
   cursor: pointer;
   transition: opacity 0.3s ease;
-  
+
   &:hover {
     opacity: 0.9;
   }
-  
-  // Special styling for Adobe Summit to center the image better
+
   &--centered {
     .gatsby-image-wrapper,
     .gatsby-image-wrapper > div,
@@ -143,16 +178,15 @@
       object-fit: cover !important;
     }
   }
-  
-  // Ensure all images maintain aspect ratio
+
   .gatsby-image-wrapper {
     width: 100%;
     height: 300px;
-    
+
     @media (max-width: 768px) {
       height: 250px;
     }
-    
+
     img {
       width: 100%;
       height: 100%;
@@ -162,119 +196,38 @@
   }
 }
 
-// Back to Top Button Styling
 .back-to-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   z-index: 1000;
-  
+
   .back-to-top-button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(23, 32, 51, 0.15);
     transition: all 0.3s ease;
-    
+
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 25px rgba(23, 32, 51, 0.2);
     }
-    
-    // Override React Spectrum button styles for circular shape
+
     .spectrum-Button-label {
       display: flex;
       justify-content: center;
       align-items: center;
     }
   }
-  
+
   @media (max-width: 768px) {
     bottom: 1rem;
     right: 1rem;
-    
+
     .back-to-top-button {
       width: 45px;
       height: 45px;
-    }
-  }
-}
-
-// Legacy styles for backward compatibility
-#projects {
-  background-color: $white-color;
-  color: $primary-color;
-  margin-top: -15rem;
-  padding-top: 15rem;
-
-  @include respond(tab-land) {
-    margin-top: 0;
-    padding-top: 5rem;
-  }
-
-  .project-wrapper {
-    margin-bottom: 15rem;
-
-    @include respond(phone) {
-      margin-bottom: 0rem;
-    }
-
-    .row {
-      margin-bottom: 8rem;
-
-      @include respond(phone) {
-        margin-bottom: 4rem;
-      }
-    }
-
-    &__text {
-      text-align: left;
-
-      @include respond(phone) {
-        margin-bottom: 2.5rem !important;
-      }
-      @include respond(tab-land) {
-        margin-bottom: 4.8rem;
-      }
-
-      &-title {
-        font-weight: bold;
-        margin-bottom: 1.8rem;
-        font-size: $mid-font-size;
-
-        @include respond(phone) {
-          font-size: 2rem;
-        }
-      }
-
-      & p > a {
-        color: $secondary-color;
-      }
-    }
-
-    &__image {
-      width: 90%;
-      margin: 0 auto;
-
-      @include respond(tab-land) {
-        width: 100%;
-        margin: 0;
-      }
-
-      & .thumbnail {
-        border: none;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        transition: all 0.2s ease-out;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-        transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
-          0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-
-        @include respond(phone) {
-          border: 1px solid #d2d2d2;
-          box-shadow: none;
-          margin-bottom: 3.2rem;
-        }
-      }
     }
   }
 }

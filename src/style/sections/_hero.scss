@@ -1,69 +1,118 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 #hero {
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
-  border-bottom: 0px;
-  background: $white-color;
   font-weight: 400;
-  color: $dark-grey;
-  padding: 0rem 5.6rem;
+  color: $primary-color;
+  padding: 10rem 5.6rem 8rem;
   margin-bottom: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(82, 88, 228, 0.16), transparent 28rem),
+    radial-gradient(circle at 88% 12%, rgba(201, 95, 47, 0.18), transparent 24rem),
+    linear-gradient(135deg, #fffaf3 0%, #eef3ff 100%);
 
-  background: url("../images/snow-background.jpg");
-  background-position: center;
-  background-size: cover;
+  &::after {
+    content: '';
+    position: absolute;
+    right: -8rem;
+    bottom: -12rem;
+    width: 34rem;
+    height: 34rem;
+    border: 1px solid rgba(23, 32, 51, 0.08);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+  }
 
   @include respond(phone) {
-    padding: 0rem $default-font-size;
+    min-height: auto;
+    padding: 8rem 2rem 6rem;
   }
 
-  .hero-title {
-    font-size: 5.6rem;
-    font-weight: 700;
-    margin-bottom: 3.2rem;
+  .hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 980px;
     text-align: left;
 
-    @include respond(tab-land) {
-      font-size: 4rem;
-    }
     @include respond(tab-port) {
-      font-size: 3.6rem;
       text-align: center;
     }
-    @include respond(phone) {
-      font-size: 3.5rem;
-      line-height: 1.5;
-    }
-    @include respond(phone-xs) {
-      font-size: 2.8rem;
-    }
-  }
-  .background-cta {
-    position: relative;
-    display: flex;
-    right:0;
-    bottom: 0;
   }
 
-  .hero-cta {
+  .hero-eyebrow {
+    display: inline-flex;
+    margin-bottom: 1.6rem;
+    color: $secondary-color;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .hero-title-text {
+    max-width: 860px;
+    margin: 0;
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 800;
+    letter-spacing: -0.07em;
+    line-height: 0.96;
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+    }
+    @include respond(tab-land) {
+      font-size: 5.6rem;
+    }
+  }
+
+  .hero-subtitle {
+    max-width: 720px;
+    margin: 2.4rem 0 0;
+    color: $muted-color;
+    font-size: 2rem;
+    line-height: 1.7;
+
+    @include respond(tab-port) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  .hero-highlights {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 2.4rem 0 0;
+    padding: 0;
+    list-style: none;
 
     @include respond(tab-port) {
       justify-content: center;
     }
 
-    & a {
-      font-size: 2.4rem;
+    li {
+      border-left: 2px solid rgba(82, 88, 228, 0.42);
+      color: $muted-color;
+      padding: 0.2rem 0 0.2rem 0.9rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+  }
 
-      @include respond(phone) {
-        font-size: 2rem;
-      }
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 3.2rem;
+
+    @include respond(tab-port) {
+      justify-content: center;
     }
   }
 }

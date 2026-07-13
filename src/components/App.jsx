@@ -1,37 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Provider, defaultTheme } from '@adobe/react-spectrum';
 import Hero from './Hero/Hero';
 import About from './About/About';
 import Projects from './Projects/Projects';
+import Writing from './Writing/Writing';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import BackToTop from './BackToTop/BackToTop';
 
 import { PortfolioProvider } from '../context/context';
 
-import { heroData, aboutData, projectsData, contactData } from '../mock/data';
+import { heroData, aboutData, projectsData, writingData, contactData } from '../mock/data';
 
 function App() {
-  const [hero, setHero] = useState({});
-  const [about, setAbout] = useState({});
-  const [projects, setProjects] = useState([]);
-  const [contact, setContact] = useState({});
-  const [footer, setFooter] = useState({});
-
-  useEffect(() => {
-    setHero({ ...heroData });
-    setAbout({ ...aboutData });
-    setProjects([...projectsData]);
-    setContact({ ...contactData });
-    setFooter({});
-  }, []);
-
   return (
     <Provider theme={defaultTheme}>
-      <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+      <PortfolioProvider
+        value={{
+          hero: heroData,
+          about: aboutData,
+          projects: projectsData,
+          writing: writingData,
+          contact: contactData,
+          footer: {},
+        }}
+      >
         <Hero />
         <About />
         <Projects />
+        <Writing />
         <Contact />
         <Footer />
         <BackToTop />

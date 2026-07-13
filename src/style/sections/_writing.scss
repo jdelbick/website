@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as *;
+
+.writing-section {
+  padding: 8rem 0;
+  background: $surface-color;
+
+  @media (max-width: 768px) {
+    padding: 5rem 0;
+  }
+}
+
+.writing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.writing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.writing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid $border-color;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 50px rgba(23, 32, 51, 0.08);
+  padding: 2.4rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 70px rgba(23, 32, 51, 0.13);
+  }
+
+  .spectrum-Button {
+    margin-top: auto;
+  }
+}
+
+.writing-type {
+  display: inline-flex;
+  margin: 0 0 1rem;
+  border-radius: 999px;
+  background: rgba(82, 88, 228, 0.1);
+  color: $secondary-color;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.writing-title {
+  margin: 0 0 1.2rem;
+  color: $primary-color;
+  font-size: 2.2rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.writing-description {
+  color: $muted-color;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin: 0 0 2rem;
+}

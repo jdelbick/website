@@ -1,28 +1,26 @@
-// Base Fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 // Abstract styles
-@import './abstracts/mixins';
-@import './abstracts/variables';
-@import './abstracts/helpers';
+@use './abstracts/mixins';
+@use './abstracts/variables';
+@use './abstracts/helpers';
 
 // Base styles
-@import './base/base';
-@import './base/typography';
+@use './base/base';
+@use './base/typography';
 
 // Component styles
-@import './components/buttons';
-@import './components/spectrum';
+@use './components/buttons';
+@use './components/spectrum';
 
 // Layout styles
-@import './layout/footer';
-@import './layout/sections';
+@use './layout/footer';
+@use './layout/sections';
 
 // Section styles
-@import './sections/about';
-@import './sections/contact';
-@import './sections/hero';
-@import './sections/projects';
+@use './sections/about';
+@use './sections/contact';
+@use './sections/hero';
+@use './sections/projects';
+@use './sections/writing';
 
 // Vendor styles
 @import './vendor/css/font-awesome.min.css';
