@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Jamie Delbick | Software Engineer`,
-    description: `Personal website showcasing my work as a Software Engineer at Adobe`,
+    title: `Jamie Delbick | Staff Software Engineer`,
+    description: `Personal website showcasing my work leading teams and building AI-first enterprise products at Adobe`,
     author: `@jamiedelbick`,
   },
   plugins: [

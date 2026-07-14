@@ -2,10 +2,12 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: 'Jamie Delbick | Software Engineer',
+  title: 'Jamie Delbick | Staff Software Engineer',
   lang: 'en',
   description:
     'Jamie Delbick is a staff software engineer at Adobe leading teams and building AI-first enterprise products for creative and marketing workflows.',
+  siteUrl: 'https://jdelbick.github.io/website',
+  image: 'https://jdelbick.github.io/website/social-image.png',
 };
 
 // HERO DATA
