@@ -1,15 +1,22 @@
 import React, { useContext } from 'react';
 import { Button } from '@adobe/react-spectrum';
+import { withPrefix } from 'gatsby';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, paragraphThree } = about;
+  const { img, paragraphOne, paragraphTwo, paragraphThree, resume, coverLetter } = about;
 
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const openStaticFile = (path) => {
+    if (path) {
+      window.open(withPrefix(`/${path}`), '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -30,6 +37,12 @@ const About = () => {
               <div className="about-actions">
                 <Button variant="primary" onPress={scrollToProjects} style="fill">
                   View My Work
+                </Button>
+                <Button variant="primary" onPress={() => openStaticFile(resume)} style="outline">
+                  Download Resume
+                </Button>
+                <Button variant="primary" onPress={() => openStaticFile(coverLetter)} style="outline">
+                  Cover Letter
                 </Button>
               </div>
             </div>

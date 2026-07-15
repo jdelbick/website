@@ -30,7 +30,8 @@ export const aboutData = {
     'My day-to-day work spans product engineering, technical leadership, extensibility, and cross-functional execution. Outside of my core product work, I like experimenting with developer tools and AI-assisted workflows, including Claude skills that connect agents to real tools, authenticated APIs, and production-grade systems.',
   paragraphThree:
     'Before GenStudio, I built microservices for AEM as a Cloud Service and helped implement GenStudio Insights integrations with Meta, LinkedIn, and Customer Journey Analytics. Outside of work, I like snowboarding, exploring San Francisco, running, and building overly personalized tools for real life.',
-  resume: 'https://www.linkedin.com/in/jamiedelbick/',
+  resume: 'jamie-delbick-resume.pdf',
+  coverLetter: 'jamie-delbick-cover-letter.pdf',
 };
 
 // PROJECTS DATA

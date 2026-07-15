@@ -16,6 +16,7 @@ Personal website for Jamie Delbick, a Staff Software Engineer at Adobe with 8+ y
 - About section focused on Adobe GenStudio for Performance Marketing and team leadership
 - Projects section covering product launches, open source work, and speaking engagements
 - Published Writing section for Medium articles
+- Downloadable resume and reusable cover letter PDFs
 - Contact section with LinkedIn, GitHub, and email links
 
 Recent highlighted work includes:
@@ -53,6 +54,24 @@ npm run serve
 - `npm run type-check` - Run TypeScript checks
 - `npm run deploy` - Deploy to GitHub Pages
 
+## Resume and Cover Letter PDFs
+
+Editable source files live in `src/content/`:
+
+- `src/content/jamie-delbick-resume.md`
+- `src/content/jamie-delbick-cover-letter.md`
+
+After editing either file, regenerate the published PDFs with:
+
+```bash
+~/.claude/skills/document-skills/.venv/bin/python3 scripts/generate_career_docs.py
+```
+
+The generated files are written to `static/`:
+
+- `static/jamie-delbick-resume.pdf`
+- `static/jamie-delbick-cover-letter.pdf`
+
 ## Deployment
 
 Pushes to `main` run `.github/workflows/ci.yml`, which:
@@ -74,11 +93,14 @@ The site uses `/website` as the production path prefix for GitHub Pages, while l
 ```
 src/
 ├── components/     # React components
+├── content/        # Editable resume and cover letter source text
 ├── images/        # Source images
 ├── mock/          # Site data
 ├── pages/         # Gatsby pages
 └── style/         # SCSS stylesheets
 ```
+
+Generated PDFs live in `static/` and are published at stable URLs by Gatsby.
 
 ## Contributing
 

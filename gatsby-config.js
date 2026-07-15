@@ -1,3 +1,5 @@
+const isDevelop = process.argv.some((arg) => arg.includes('develop'));
+
 module.exports = {
   siteMetadata: {
     title: `Jamie Delbick | Staff Software Engineer`,
@@ -45,6 +47,6 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: process.env.NODE_ENV === 'production' ? '/website' : '',
+  pathPrefix: isDevelop ? '' : '/website',
   trailingSlash: `always`,
 };
