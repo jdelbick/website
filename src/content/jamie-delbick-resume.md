@@ -1,113 +1,78 @@
 # Jamie Delbick
 
-Staff Software Engineer | AI-First Enterprise Products | Engineering Leadership
+Staff Software Engineer | Full-Stack & Platform Engineering
 
-San Francisco, CA  
-Email: jamie.delbick@gmail.com  
-LinkedIn: linkedin.com/in/jamiedelbick  
-GitHub: github.com/jdelbick  
+San Francisco, CA
+Email: jamie.delbick@gmail.com
+LinkedIn: linkedin.com/in/jamiedelbick
+GitHub: github.com/jdelbick
 Portfolio: jdelbick.github.io/website
 
-## Summary
+## Profile
 
-Staff Software Engineer at Adobe with 8+ years of experience architecting complex systems, mentoring engineers, and leading teams that build successful customer-focused enterprise products. Full-stack product engineer with deep experience across AI-first creative workflows, complex frontends, creative tooling, extensibility, cloud services, data integrations, and developer platforms. Known for turning ambiguous product opportunities into shipped enterprise experiences, partnering across product/design/marketing, and communicating technical direction through public talks and writing.
+Hands-on technical lead with 8+ years at Adobe building enterprise software. Lead content creation and editing engineering for Adobe GenStudio for Performance Marketing, helping marketers create on-brand ads. Partner with engineering, product, and design to deliver creative tools, shared platforms, and AI-assisted workflows.
 
-## Core Strengths
+## Technical Skills
 
-- Engineering leadership and cross-functional execution
-- AI-first enterprise product development
-- Full-stack web application architecture
-- Creative technology and marketing workflow automation
-- Developer extensibility, APIs, and integration platforms
-- Cloud services, microservices, and event-driven systems
-- Technical communication, public speaking, and developer education
+- Languages and frontend: TypeScript, JavaScript, Python, React
+- Backend and platforms: Node.js, AWS Lambda, serverless and event-driven systems, REST APIs, GraphQL, Apache Airflow, ETL pipelines
+- AI and ML: Claude Code, GitHub Copilot, agent skills, Model Context Protocol (MCP), PyTorch, TensorFlow, scikit-learn
 
-## Experience
+## Professional Experience
 
-### Adobe - Senior Software Engineer (L5), GenStudio Create Canvas
+### Adobe - Staff Software Engineer, Adobe GenStudio for Performance Marketing
 
-Feb 2025 - Present
+February 2025 - Present
 
-- Lead the Horizon Canvas initiative for Adobe GenStudio for Performance Marketing, architecting advanced editing capabilities on a multi-user infinite canvas for enterprise creative workflows.
-- Delivered the foundational GenStudio canvas architecture on Horizon, including MVC architecture, chrome field display, multi-artboard layout, and bi-directional messaging between Horizon and the GenStudio micro-frontend.
-- Architected and implemented a template caching service that improved canvas load time by 4x, helping customers work faster in large creative editing flows.
-- Mentored 6+ engineers across the Horizon Canvas initiative, helping teammates lead major system designs and onboarding partner teams to contribute to the canvas platform.
-- Built the GenStudio for Performance Marketing integration for brand-governed ChatGPT ads, enabling enterprise marketers to assemble approved ad creative for a new conversational AI performance channel.
-- Delivered the foundation for GenStudio UI add-ons and led the system design for third-party DAM extensibility, enabling partners such as Bynder and customers such as AT&T to connect their DAMs to GenStudio.
-- Co-presented "A Developer's Guide: Extending Adobe GenStudio" at Adobe Summit 2025 to 900+ virtual attendees, covering real-world GenStudio extensibility patterns and developer workflows.
+- Lead content creation and editing engineering, helping enterprise marketers generate, customize, and scale ads using on-brand content generation.
+- Led technical direction for Carousel Ads and multi-channel draft creation, partnering with engineering, product, and design to define scope, align architecture, and guide implementation across teams.
+- Led a redesign of GenStudio's editing experience using the Adobe-owned, multi-user canvas platform that also powers Adobe Express; brought the redesigned canvas to general availability in March 2026.
+- Reduced cached-template selection-to-draft p95 latency from approximately 48 seconds to 15 seconds by architecting template preprocessing and caching across Adobe Express and GenStudio.
+- Led external digital asset management (DAM) integration design and helped deliver custom validation extensions, enabling partner and customer workflows.
+- Implemented GenStudio's ChatGPT Ads creation experience and partnered with the ad-publishing team to bring the channel to general availability.
+- Mentored 6+ engineers on system design and career development, supported a teammate's promotion, and onboarded partner teams to the shared editing platform.
+- Built reusable Claude and GitHub Copilot skills connecting agents to observability and engineering tools for cross-service troubleshooting and repeatable development workflows.
+- Contributed to an autonomous issue-resolution pipeline, adding shared-codebase guidance, pull request conventions, and regression-aware workflows.
+- Built server-side document-creation capabilities that became a foundation for agent-driven creative workflows and MCP integrations.
 
-### Adobe - Software Engineer IV, GenStudio Insights and AEM Innovation
+### Adobe - Software Engineer IV, GenStudio Insights and Asset Intelligence
 
-Aug 2022 - Feb 2025
+August 2022 - February 2025
 
-- Led and architected the backend for GenStudio Insights, a new enterprise product that centralizes performance marketing data and content intelligence across ad channels.
-- Built services and data integrations that pulled ad performance data from Meta, LinkedIn, and other channels into GenStudio dashboards, helping customers understand how creative assets perform.
-- Coordinated delivery across Ad Cloud, GenStudio Romania, GenStudio Austin, and Intelligent Services teams to launch GenStudio Insights for Performance Marketing in time for Adobe MAX.
-- Led feature architecture for future GenStudio integrations across connection points such as Meta, Google DV360, and TikTok.
-- Helped plan, architect, and implement Assets Pool, an AEM innovation project focused on helping customers find assets across Adobe and non-Adobe repositories.
-- Prototyped asset identity and visually similar image/video search using custom CAI models, Python lambdas, PyTorch, TensorFlow, and scikit-learn.
-- Presented Asset Catalog goals and architecture to 60+ engineers and contributed to Adobe's Open Source Committee.
+- Helped lead the GenStudio Insights launch for Adobe MAX, coordinating advertising, analytics, and engineering teams across the US and Romania to connect creative attributes with campaign performance.
+- Architected the data-platform redesign for GenStudio Insights and ad activation, using Apache Airflow to orchestrate a custom ETL pipeline.
+- Designed creative-featurization services and guided backend implementation across Adobe's data and asset platforms; helped onboard three beta customers.
+- Co-designed ingestion and ML-backed visual deduplication for an asset-discovery pilot, delivering 3x ingestion throughput and 98% precision in initial visual-matching tests; adapted components for subsequent asset-intelligence products.
+- Co-led Adobe Experience Manager (AEM) and Document Cloud integration for multi-page document previews, comments, and annotations; added integration and load testing.
 
-### Adobe - Software Engineer III, AEM Asset Compute and Content Automation
+### Adobe - Software Engineer III, AEM Cloud Asset Processing
 
-Feb 2021 - Aug 2022
+February 2021 - August 2022
 
-- Built AEM as a Cloud Service asset processing capabilities across Node.js microservices, Adobe I/O Runtime actions, and React-based user experiences.
-- Co-led runtime optimization work for a backend per-client throttling service that used request complexity weighting to protect Adobe I/O Runtime resources and reduce operational risk.
-- Co-led PDF Preview for AEM, integrating Document Cloud APIs so customers could view, comment on, and annotate uploaded documents directly in AEM.
-- Built the Sensei Listens Alpha prototype with Intelligent Services and DX UI teams, including serverless actions for validation, training, polling, inferencing, and long-running workflow orchestration.
-- Mentored a 12-week summer intern through a successful prototype for scrubbable video thumbnail preview.
-- Spoke at industry and product events including Geekle Node.js Global Conference, Tech Summit, and developer panels.
+- Co-led resource-aware, per-customer throttling for a multi-tenant asset-processing service, using historical telemetry to estimate request cost and protect shared runtime capacity.
+- Built processing-pipeline test infrastructure and improved transfer performance, error handling, and alerting across Node.js services and serverless workers.
 
 ### Adobe - Software Engineer II, AEM as a Cloud Service
 
-Jul 2019 - Feb 2021
+July 2019 - February 2021
 
-- Built features for a multi-tenant, scalable, extensible cloud service for processing assets in AEM as a Cloud Service.
-- Developed backend services and full-stack tooling for asset processing workflows, helping customers automate how creative and document assets move through AEM.
-- Presented at Adobe Developers Live on extending AEM as a Cloud Service through asset microservices and Adobe App Builder.
+- Developed tools for third-party asset-processing extensions, adding Azure and S3 storage support, credential handling, and automated React UI tests.
+- Built synthetic health checks, resource metrics, and retry/error-handling improvements across SDKs and services; integrated Photoshop Actions into a cloud processing worker.
 
 ### Adobe - Software Engineering Intern
 
-May 2018 - Jun 2019
+May 2018 - June 2019
 
-- Collaborated with the engineering team to design and develop a cloud-based asset processing service.
-- Created a proof of concept for integrating Adobe artificial intelligence services into the asset processing flow.
-- Built a React single-page developer tool for testing and using the service.
+- Prototyped AI-service integration and built a React developer tool for a new cloud asset-processing platform.
 
-## Selected Projects
+## Selected Speaking and Writing
 
-### GenStudio ChatGPT Ads Integration
-
-Built a GenStudio for Performance Marketing integration for brand-governed ChatGPT ads, bringing enterprise approval workflows and brand-safe creative assembly into a new conversational AI ad channel.
-
-### GenStudio Create Canvas
-
-Lead engineering work on creative tooling that helps enterprise marketers generate, customize, and scale brand-governed content.
-
-### Claude Skills
-
-Created reusable Claude Code skills for AI-assisted workflows, including patterns for connecting agents to real tools, authenticated APIs, and repeatable development processes.
-
-### Personal Website
-
-Built and maintain a custom Gatsby and React Spectrum portfolio site showcasing product launches, speaking engagements, writing, and AI workflow experiments.
-
-## Writing and Speaking
-
-- "I Built My Wedding Website with Claude" - Medium
-- "Giving AI Access to Okta-Protected APIs" - Medium
-- "Using Proxyquire with Nested Dependencies" - Medium
-- Adobe Summit 2025 - "A Developer's Guide: Extending Adobe GenStudio"
-- API World - Content and Commerce AI APIs
-- Adobe Developers Live - AEM as a Cloud Service Extensions
+- Adobe Summit 2025: Co-presenter, "A Developer's Guide: Extending Adobe GenStudio."
+- Geekle Node.js Global Conference 2022: Testing-strategies talk and live Q&A for 1,300+ virtual attendees.
+- Technical writing: "Giving AI Access to Okta-Protected APIs"; "Using Proxyquire with Nested Dependencies."
 
 ## Education
 
 ### University of California, Berkeley
 
-B.A. Applied Mathematics, focus in Computer Science
-
-## Technologies
-
-JavaScript, React, Gatsby, Node.js, SCSS, Adobe React Spectrum, Adobe GenStudio, Adobe Experience Manager as a Cloud Service, Adobe App Builder, APIs, cloud services, microservices, Customer Journey Analytics, Meta and LinkedIn integrations, Claude Code, AI-assisted development workflows.
+B.A. Applied Mathematics, concentration in Data Science, minor in Computer Science

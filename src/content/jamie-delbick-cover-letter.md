@@ -8,15 +8,15 @@ jdelbick.github.io/website
 
 Dear Hiring Team,
 
-I am excited to apply for Staff Software Engineer and engineering leadership roles focused on AI-first products, enterprise software, and creative technology. I bring 8+ years of experience at Adobe, where I lead teams of engineers building Adobe GenStudio for Performance Marketing and help translate emerging AI opportunities into shipped enterprise product experiences.
+I am a Staff Software Engineer at Adobe with 8+ years of experience building enterprise software. I partner with engineering, product, and design to set technical direction and deliver customer-facing capabilities in Adobe GenStudio for Performance Marketing.
 
-In my current work, I focus on GenStudio Create Canvas and the creative workflows marketers use to generate, customize, approve, and scale content. I recently built the GenStudio for Performance Marketing integration for brand-governed ChatGPT ads, helping enterprise teams assemble approved ad creative for a new conversational AI performance channel. That work sits at the intersection I enjoy most: applied AI, enterprise-grade product quality, cross-functional execution, and systems that make creative teams faster without sacrificing governance.
+I lead engineering for content creation and editing, helping enterprise marketers generate, customize, and scale on-brand ads. I led a redesign using the collaborative canvas platform that also powers Adobe Express and guided technical direction for Carousel Ads and multi-channel draft creation. I also implemented GenStudio's ChatGPT Ads creation experience and partnered across teams to bring it to general availability.
 
-My background spans full-stack product engineering, technical leadership, extensibility, cloud services, and developer platforms. Before GenStudio Create Canvas, I built microservices for AEM as a Cloud Service and helped implement GenStudio Insights integrations with Meta, LinkedIn, and Customer Journey Analytics. I have also shared this work externally through Adobe Summit, API World, Adobe Developers Live, and technical writing about AI-assisted development workflows.
+My background spans full-stack product engineering, distributed systems, data integrations, and developer platforms. Previously, I architected a data-platform redesign for GenStudio Insights and ad activation using Apache Airflow and a custom ETL pipeline, and built cloud asset-processing capabilities for Adobe Experience Manager. I share engineering lessons through Adobe Summit, API World, Adobe Developers Live, and technical writing.
 
-Outside of my core product work, I explore how AI can improve developer workflows in practical, production-minded ways. I created reusable Claude Code skills, wrote about giving AI assistants access to Okta-protected APIs, and built personal projects that turn real workflows into repeatable AI-assisted systems. These side projects sharpen the same judgment I bring to enterprise product work: start with a real user problem, respect production constraints, and build tools that people can actually use.
+I build reusable Claude and GitHub Copilot skills that connect agents to engineering and observability tools, and contribute to autonomous issue-resolution workflows. I also built server-side document-creation capabilities that became a foundation for agent-driven creative workflows and MCP integrations. This work reflects how I approach AI: start with a real user problem, respect production constraints, and build useful tools.
 
-I would be excited to bring my experience leading engineering teams, building AI-first enterprise products, and shipping creative technology at Adobe to your team. Thank you for your consideration.
+I would be excited to bring my experience building enterprise software, mentoring engineers, and guiding cross-functional delivery to your team. Thank you for your consideration.
 
 Sincerely,  
 Jamie Delbick

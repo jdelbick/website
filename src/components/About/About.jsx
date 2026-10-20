@@ -41,7 +41,11 @@ const About = () => {
                 <Button variant="primary" onPress={() => openStaticFile(resume)} style="outline">
                   Download Resume
                 </Button>
-                <Button variant="primary" onPress={() => openStaticFile(coverLetter)} style="outline">
+                <Button
+                  variant="primary"
+                  onPress={() => openStaticFile(coverLetter)}
+                  style="outline"
+                >
                   Cover Letter
                 </Button>
               </div>

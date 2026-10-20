@@ -1,6 +1,6 @@
 # Jamie Delbick - Personal Website
 
-Personal website for Jamie Delbick, a Staff Software Engineer at Adobe with 8+ years of experience leading teams and building AI-first enterprise products.
+Personal website for Jamie Delbick, a Staff Software Engineer at Adobe with 8+ years of experience building enterprise software and providing cross-functional technical leadership.
 
 ## Tech Stack
 
@@ -12,7 +12,7 @@ Personal website for Jamie Delbick, a Staff Software Engineer at Adobe with 8+ y
 
 ## Site Content
 
-- Hero positioning around AI-first enterprise products, engineering leadership, and creative technology
+- Hero positioning around enterprise software, technical leadership, and AI-powered creative tools
 - About section focused on Adobe GenStudio for Performance Marketing and team leadership
 - Projects section covering product launches, open source work, and speaking engagements
 - Published Writing section for Medium articles
@@ -24,6 +24,8 @@ Recent highlighted work includes:
 - GenStudio ChatGPT Ads integration
 - Adobe Summit 2025 GenStudio extensibility talk
 - Claude Skills open source repo
+- Claude and GitHub Copilot skills, autonomous issue-resolution contributions, and MCP-related capabilities
+- GenStudio Insights and ad activation data architecture using Apache Airflow and a custom ETL pipeline
 - Articles on Claude workflows, Okta-protected APIs, and testing patterns
 
 ## Local Development

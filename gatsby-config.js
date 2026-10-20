@@ -3,7 +3,7 @@ const isDevelop = process.argv.some((arg) => arg.includes('develop'));
 module.exports = {
   siteMetadata: {
     title: `Jamie Delbick | Staff Software Engineer`,
-    description: `Personal website showcasing my work leading teams and building AI-first enterprise products at Adobe`,
+    description: `Personal website showcasing my work building enterprise software, AI-powered creative tools, and distributed systems at Adobe`,
     author: `@jamiedelbick`,
   },
   plugins: [
