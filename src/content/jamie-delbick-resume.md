@@ -10,13 +10,14 @@ Portfolio: jdelbick.github.io/website
 
 ## Profile
 
-Hands-on technical lead with 8+ years at Adobe building enterprise software. Lead content creation and editing engineering for Adobe GenStudio for Performance Marketing, helping marketers create on-brand ads. Partner with engineering, product, and design to deliver creative tools, shared platforms, and AI-assisted workflows.
+Staff Software Engineer with 8+ years at Adobe building enterprise software. Currently technical lead on engineering teams building content creation and editing for Adobe GenStudio for Performance Marketing, collaborating across Adobe with engineering, product, and design.
 
 ## Technical Skills
 
-- Languages and frontend: TypeScript, JavaScript, Python, React
-- Backend and platforms: Node.js, AWS Lambda, serverless and event-driven systems, REST APIs, GraphQL, Apache Airflow, ETL pipelines
-- AI and ML: Claude Code, GitHub Copilot, agent skills, Model Context Protocol (MCP), PyTorch, TensorFlow, scikit-learn
+- Languages and frontend: TypeScript, JavaScript, Python, Lit (Web Components), MobX, React
+- Backend and data: Node.js, AWS Lambda, SQS, DynamoDB, Cloudflare, REST APIs, GraphQL, Apache Airflow, ETL pipelines
+- Observability: Datadog, Splunk, New Relic
+- AI: Claude Code, GitHub Copilot, MCP, LangChain, LangSmith, Mastra
 
 ## Professional Experience
 
@@ -24,16 +25,16 @@ Hands-on technical lead with 8+ years at Adobe building enterprise software. Lea
 
 February 2025 - Present
 
-- Lead content creation and editing engineering, helping enterprise marketers generate, customize, and scale ads using on-brand content generation.
-- Led technical direction for Carousel Ads and multi-channel draft creation, partnering with engineering, product, and design to define scope, align architecture, and guide implementation across teams.
-- Led a redesign of GenStudio's editing experience using the Adobe-owned, multi-user canvas platform that also powers Adobe Express; brought the redesigned canvas to general availability in March 2026.
-- Reduced cached-template selection-to-draft p95 latency from approximately 48 seconds to 15 seconds by architecting template preprocessing and caching across Adobe Express and GenStudio.
+- Technical lead for initiatives spanning 20+ engineers across Europe, India, and the US. Partner with engineering managers, product, and design to deliver on-brand ad generation through a custom canvas and AI-generated copy.
+- Led a team building MCP tools for draft and campaign creation from briefs, enabling users to work through ChatGPT or Claude instead of the GenStudio UI. Built the foundational server-side document-creation capabilities.
+- Led architecture and cross-team delivery for Meta Carousel Ad generation and multi-channel workflows that generate LinkedIn, Meta, and TikTok ads from shared context.
+- Led GenStudio's editing redesign on the Adobe-owned, multi-user canvas platform that also powers Adobe Express, reaching general availability in March 2026.
+- Built a preprocessing cache service for Adobe Express templates in GenStudio, reducing p95 time to create a draft from approximately 48 seconds to 15 seconds for cached templates.
+- Implemented GenStudio's ChatGPT Ads creation experience end-to-end in production in one week, partnering with the ad-publishing team to launch the channel.
 - Led external digital asset management (DAM) integration design and helped deliver custom validation extensions, enabling partner and customer workflows.
-- Implemented GenStudio's ChatGPT Ads creation experience and partnered with the ad-publishing team to bring the channel to general availability.
+- Enabled Claude-based cloud agents for my GenStudio area with codebase guidance and PR conventions, supporting regression detection and investigation to identify responsible PRs and open reverts or forward fixes.
+- Built reusable Claude and GitHub Copilot skills connecting agents to observability and engineering tools for cross-service troubleshooting and repeatable workflows.
 - Mentored 6+ engineers on system design and career development, supported a teammate's promotion, and onboarded partner teams to the shared editing platform.
-- Built reusable Claude and GitHub Copilot skills connecting agents to observability and engineering tools for cross-service troubleshooting and repeatable development workflows.
-- Contributed to an autonomous issue-resolution pipeline, adding shared-codebase guidance, pull request conventions, and regression-aware workflows.
-- Built server-side document-creation capabilities that became a foundation for agent-driven creative workflows and MCP integrations.
 
 ### Adobe - Software Engineer IV, GenStudio Insights and Asset Intelligence
 
@@ -43,7 +44,6 @@ August 2022 - February 2025
 - Architected the data-platform redesign for GenStudio Insights and ad activation, using Apache Airflow to orchestrate a custom ETL pipeline.
 - Designed creative-featurization services and guided backend implementation across Adobe's data and asset platforms; helped onboard three beta customers.
 - Co-designed ingestion and ML-backed visual deduplication for an asset-discovery pilot, delivering 3x ingestion throughput and 98% precision in initial visual-matching tests; adapted components for subsequent asset-intelligence products.
-- Co-led Adobe Experience Manager (AEM) and Document Cloud integration for multi-page document previews, comments, and annotations; added integration and load testing.
 
 ### Adobe - Software Engineer III, AEM Cloud Asset Processing
 
